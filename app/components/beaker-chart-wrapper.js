@@ -3,14 +3,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['flex-row'],
+  updateInterval: 30000,
   didInsertElement () {
     this.getData();
   },
   getData () {
     const success = (data) => {
       this.set('metrics', this.formatData(data));
-      Ember.run.later(() => { this.getData(); }, 30000);
+      Ember.run.later(() => { this.getData(); }, this.get('updateInterval'));
     };
 
     Ember.$.getJSON('beaker/api/aggregated').then(success);

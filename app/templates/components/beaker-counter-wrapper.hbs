@@ -1,4 +1,7 @@
 <div class="flex-row">
+  <h1>Counters</h1>
+</div>
+<div class="flex-row">
   {{#each counters as |counter index|}}
     {{beaker-counter number=index title=counter.measurement value=counter.value}}
   {{/each}}
