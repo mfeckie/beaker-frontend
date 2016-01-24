@@ -13,5 +13,13 @@ export default Ember.Component.extend({
       }, this.get('updateInterval'));
     };
     Ember.$.get('beaker/api/counters').then(success);
-  }
+  },
+  updateIntervalDisplay: Ember.computed('updateInterval', {
+    get () {
+      return this.get('updateInterval') / 1000;
+    },
+    set (key, value) {
+      this.set('updateInterval', value * 1000);
+    }
+  })
 });
