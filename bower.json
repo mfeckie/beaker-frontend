@@ -8,11 +8,8 @@
     "ember-qunit-notifications": "0.1.0",
     "jquery": "1.11.3",
     "loader.js": "^3.5.0",
-    "d3": "~3.5.13",
-    "epoch": "~0.8.4",
     "lodash": "~4.0.0",
-    "chartist": "~0.9.5",
-    "fecha": "~1.2.2"
+    "highcharts": "~4.2.1"
   },
   "resolutions": {
     "ember": "2.3.0"
