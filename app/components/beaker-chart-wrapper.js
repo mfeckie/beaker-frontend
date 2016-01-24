@@ -3,7 +3,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['chart-flex-row'],
+  classNames: ['flex-row'],
   didInsertElement () {
     this.getData();
   },

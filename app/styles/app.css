@@ -1,5 +1,39 @@
-.chart-flex-row {
+* {
+  font-family: 'Unica One', san-serif;
+}
+
+.flex-row {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.beaker-counter {
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  border: 2px solid grey;
+  margin: 10px;
+}
+
+.beaker-counter-heading {
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+.beaker-counter-value {
+  padding: 5px;
+  font-size: 2em;
+}
+
+.beaker-counter-0 {
+  background: #559898;
+}
+
+.beaker-counter-1 {
+  background: #A45CA4;
+}
+
+.beaker-counter-2 {
+  background: #6DC27C;
 }
