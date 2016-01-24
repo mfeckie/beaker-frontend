@@ -4,6 +4,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   updateInterval: 30000,
+  updateIntervalDisplay: Ember.computed('updateInterval', {
+    get () {
+      return this.get('updateInterval') / 1000;
+    },
+    set (key, value) {
+      this.set('updateInterval', value * 1000);
+    }
+  }),
   didInsertElement () {
     this.getData();
   },

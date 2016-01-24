@@ -1,8 +1,0 @@
-<div class="flex-row">
-  <h1>Time Series Charts</h1>
-</div>
-<div class="flex-row">
-  {{#each metrics as |metric|}}
-    {{beaker-time-series-chart data=metric.series title=metric.title}}
-  {{/each}}
-</div>
