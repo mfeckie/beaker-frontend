@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function localeNumber(params, hash) {
+export function localeNumber(params) {
   return params.toLocaleString();
 }
 

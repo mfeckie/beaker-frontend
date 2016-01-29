@@ -6,19 +6,12 @@ moduleForComponent('beaker-gauge', 'Integration | Component | beaker gauge', {
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });"
+  this.set('gaugeName', 'Test Gauge');
+  this.set('data', [{name: 'Test Gauge'}]);
+  this.set('index', 0);
 
-  this.render(hbs`{{beaker-gauge}}`);
+  this.render(hbs`{{beaker-gauge gaugeName=gauge data=data gaugeKey=index}}`);
+  const regex = /Test Gauge/;
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:"
-  this.render(hbs`
-    {{#beaker-gauge}}
-      template block text
-    {{/beaker-gauge}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(regex.test(this.$().text().trim()));
 });

@@ -3,7 +3,7 @@
     "document",
     "window",
     "-Promise",
-    "Highcharts",
+    "Highcharts"
   ],
   "browser": true,
   "boss": true,

@@ -43,7 +43,7 @@ export default Ember.Component.extend({
       Ember.run.later(() => {
         this.updateData();
       }, this.get('updateInterval'));
-    }
+    };
     Ember.$.get('beaker/api/gauges').then(success);
   },
   updateIntervalDisplay: Ember.computed('updateInterval', {
