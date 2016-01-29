@@ -20,7 +20,10 @@ export default Ember.Component.extend({
         width: 300
       },
       title: {
-        text: gaugeData.name
+        text: gaugeData.name,
+        style: {
+          textTransform: 'none'
+        }
       },
       plotOptions: {
         series: {

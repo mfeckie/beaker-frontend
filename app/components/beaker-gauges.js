@@ -1,17 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  updateInterval: 5000,
+  updateInterval: 1000,
   min: 0,
   max: 1000,
   didInsertElement () {
     this.getData();
   },
+  gauges: Ember.computed('data.[]', function () {
+    const data = this.get('data');
+
+    return Object.keys(data || {});
+  }),
   getData () {
     const success = (data) => {
-      const gauges = Object.keys(data);
-
-      this.set('gauges', gauges);
 
       const gaugeData = this.formatData(data);
 

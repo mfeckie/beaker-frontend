@@ -15,9 +15,12 @@ export default Ember.Component.extend({
   didInsertElement () {
     this.getData();
   },
+  metrics: Ember.computed('data.[]', function () {
+    const metrics = this.get('data');
+    return Object.keys(metrics || {});
+  }),
   getData () {
     const success = (data) => {
-      this.set('metrics', Object.keys(data));
       this.set('data', this.formatData(data));
       Ember.run.later(() => {
         this.updateData();

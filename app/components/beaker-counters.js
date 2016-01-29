@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  updateInterval: 5000,
+  updateInterval: 1000,
   didInsertElement () {
     this.updateData();
   },

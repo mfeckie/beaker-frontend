@@ -21,7 +21,10 @@ export default Ember.Component.extend({
         }
       },
       title: {
-        text: data.title
+        text: data.title,
+        style: {
+          textTransform: 'none'
+        }
       },
       xAxis: {
         type: 'datetime'
