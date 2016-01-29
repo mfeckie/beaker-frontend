@@ -8,8 +8,13 @@ module.exports = function(defaults) {
   });
 
   app.import('bower_components/highcharts/highcharts.js');
+  app.import('bower_components/highcharts/highcharts-more.js');
+  app.import('bower_components/highcharts/modules/solid-gauge.js');
   app.import('bower_components/highcharts/themes/dark-unica.js');
+  app.import('bower_components/highcharts/modules/exporting.js');
   app.import('bower_components/lodash/dist/lodash.js');
+
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

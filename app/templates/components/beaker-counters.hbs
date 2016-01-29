@@ -3,7 +3,7 @@
 </div>
 <div class="flex-row">
   {{#each counters as |counter index|}}
-    {{beaker-counter number=index title=counter.measurement value=counter.value}}
+    {{beaker-counter number=index title=counter.name value=counter.value}}
   {{/each}}
 </div>
 <div class="flex-row">

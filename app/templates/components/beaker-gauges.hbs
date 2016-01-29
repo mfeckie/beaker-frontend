@@ -1,0 +1,14 @@
+<div class="flex-row">
+  <h1>Gauges</h1>
+</div>
+<div class="flex-row">
+  {{#each gauges as | gauge index|}}
+    {{beaker-gauge gaugeName=gauge data=data gaugeKey=index }}
+  {{/each}}
+</div>
+<div class="flex-row">
+  <div>
+    <label for="">Gauge Update Interval (seconds)</label>
+    {{input type='number' min=1 value=updateIntervalDisplay}}
+  </div>
+</div>
