@@ -1,14 +1,5 @@
 <div class="flex-row">
-  <h1>Counters</h1>
-</div>
-<div class="flex-row">
   {{#each counters as |counter index|}}
     {{beaker-counter number=index title=counter.name value=counter.value}}
   {{/each}}
-</div>
-<div class="flex-row">
-  <div>
-    <label for="">Counter Update Interval (seconds)</label>
-    {{input type='number' min=1 value=updateIntervalDisplay}}
-  </div>
 </div>
