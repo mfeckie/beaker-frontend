@@ -17,10 +17,22 @@ export default Ember.Component.extend({
   },
   getData () {
     const success = (data) => {
-      this.set('metrics', this.formatData(data));
-      Ember.run.later(() => { this.getData(); }, this.get('updateInterval'));
+      this.set('metrics', Object.keys(data));
+      this.set('data', this.formatData(data));
+      Ember.run.later(() => {
+        this.updateData();
+      }, this.get('updateInterval'));
     };
 
+    Ember.$.getJSON('beaker/api/aggregated').then(success);
+  },
+  updateData() {
+    const success = (data) => {
+      this.set('data', this.formatData(data));
+      Ember.run.later(() => {
+        this.updateData();
+      }, this.get('updateInterval'));
+    };
     Ember.$.getJSON('beaker/api/aggregated').then(success);
   },
   formatData(data) {
