@@ -6,10 +6,13 @@
 
 body {
   background-color: #000;
-  background-image: url('/images/beaker-with-text.png');
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 150px;
+}
+
+.beaker-logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
 }
 
 .page-heading {
