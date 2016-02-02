@@ -1,4 +1,7 @@
 <div class="flex-row">
+  {{#unless metrics}}
+    <h1 class="white">No times series data available yet ....</h1>
+  {{/unless}}
   {{#each metrics as |metric index|}}
     {{beaker-chart data=data metricKey=index }}
   {{/each}}
